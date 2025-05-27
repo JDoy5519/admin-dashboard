@@ -7,31 +7,65 @@ html, body {
   width: 100%;
 }
 
-
-/*left hand side*/
-
 .container {
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
+}
+
+
+/*left hand side*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+svg {
+    height: 30px;
+    width: 30px;
+    fill: #2F3C7E;
+}
+
+.home {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+
+.sidebar .logo {
+    flex-direction: row !important;
+    justify-content: flex-start;
 }
 
 .sidebar {
-    background-color: black;
+    background-color: #FBEAEB;
+    min-width: 180px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 75px;
 }
 
 .sidebar > * {
-    color: red;
+    color: #2F3C7E;
 }
 
-.logo {
-    text-align: center;
+.sidebar > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 /*right hand side*/
@@ -39,14 +73,14 @@ html, body {
 /*container*/
 
 .content-container {
-    background-color: red;
+    background-color: #FBEAEB;
     display: grid;
     grid-template-areas: 
     "search-bar search-bar"
     "profile-bar profile-bar"
     "your-projects announcements"
     "your-projects trending";
-    grid-template-rows: 1fr 1.5fr 3fr 3fr;
+    grid-template-rows: 1fr 1.1fr 3fr 3fr;
     grid-template-columns: 2.5fr 1fr;
 }
 
@@ -61,7 +95,8 @@ html, body {
 
 .search-left-container,
 .search-right-container {
-    background-color: white;
+    background-color: #2F3C7E;
+    color: #FBEAEB;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -70,9 +105,16 @@ html, body {
 }
 
 .look-up {
+    background-color: #2F3C7E;
+    border-color: #FBEAEB;
+    color:#FBEAEB;
     border-radius: 15px;
     width: 250px;
     height: 20px;
+}
+
+::placeholder {
+    color: #FBEAEB;
 }
 
 /*profile*/
