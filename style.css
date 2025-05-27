@@ -1,0 +1,65 @@
+/*page set up*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*left hand side*/
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sidebar > * {
+    color: red;
+}
+
+/*right hand side*/
+
+.content-container {
+    background-color: red;
+    display: grid;
+    grid-template-areas: 
+    "search-bar search-bar"
+    "profile-bar profile-bar"
+    "your-projects announcements"
+    "your-projects trending";
+    grid-template-rows: 1fr 1.5fr 3fr 3fr;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+.search-bar {
+    grid-area: search-bar;
+}
+
+.profile-bar {
+    grid-area: profile-bar;
+}
+
+.your-projects {
+    grid-area: your-projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
