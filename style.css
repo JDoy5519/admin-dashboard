@@ -86,11 +86,19 @@ svg {
 
 /*search*/
 
+#search-bar-icon, #notifications-icon {
+    fill: #FBEAEB;
+    min-height: 30px;
+    max-height: 50px;
+    min-width: 30px;
+    max-width: 50px;
+}
+
 .search-bar {
     grid-area: search-bar;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1.8fr 1fr;
+    grid-template-columns: 1fr .5fr;
 }
 
 .search-left-container,
@@ -98,26 +106,53 @@ svg {
     background-color: #2F3C7E;
     color: #FBEAEB;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    padding: 25px;
     gap: 25px;
+}
+
+.search-left-container {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: flex-start;
+}
+
+.search-right-container {
+    padding: 10px;
+    justify-content: flex-end;
 }
 
 .look-up {
     background-color: #2F3C7E;
     border-color: #FBEAEB;
+    border-width: 2px;
     color:#FBEAEB;
     border-radius: 15px;
-    width: 250px;
+    min-width: 250px;
+    max-width: 1000px;
     height: 20px;
+    border-style: solid;
+    flex-grow: 1;
 }
 
 ::placeholder {
     color: #FBEAEB;
 }
 
+.profile-icons {
+    min-height: 30px;
+    max-height: 50px;
+    min-width: 30px;
+    max-width: 50px;
+}
+
 /*profile*/
+
+.profile-icons-two {
+    min-height: 50px;
+    max-height: 80px;
+    min-width: 50px;
+    max-width: 80px;
+}
 
 .profile-bar {
     grid-area: profile-bar;
@@ -128,25 +163,34 @@ svg {
 }
 
 .profile-left-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 2fr;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
 }
 
 .profile-right-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
+    gap: 20px;
 }
 
 .button-options {
-    background-color: white;
-    height: 25px;
-    width: 100px;
+    background-color: #2F3C7E;
+    color: #FBEAEB;
+    height: 35px;
+    min-width: 100px;
+    flex-grow: 1;
     border-radius: 20px;
     text-align: center;
+    align-content: center;
+}
+
+.welcome-container {
+    color: #2F3C7E;
 }
 
 /*projects*/
@@ -155,18 +199,21 @@ svg {
     grid-area: your-projects;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    padding: 50px;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, minmax(200px,1fr));
+    padding: 10px;
+    gap: 20px;
 }
 
 .grid-plan {
-    height: 100px;
-    width: 250px;
-    background-color: white;
+    background-color: #2F3C7E;
+    color: #FBEAEB;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .grid-icons {

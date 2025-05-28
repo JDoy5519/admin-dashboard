@@ -69,21 +69,21 @@
         <div class="content-container">
             <div class="search-bar">
                 <div class="search-left-container">
-                    <div class="search-icon">Search!</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" id="search-bar-icon" width="30" height="30" viewBox="0 0 24 24"><path d="M11.5 9C10.12 9 9 10.12 9 11.5S10.12 14 11.5 14 14 12.88 14 11.5 12.88 9 11.5 9M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4M16.79 18.21L13.88 15.3C13.19 15.74 12.37 16 11.5 16C9 16 7 14 7 11.5S9 7 11.5 7 16 9 16 11.5C16 12.38 15.74 13.19 15.3 13.89L18.21 16.79L16.79 18.21Z" /></svg>
                     <input type="text" placeholder="Look something up!" class="look-up">
                 </div>
                 <div class="search-right-container">
-                    <div class="notifications-icon">Notifications!</div>
-                    <div class="profile-picture-one">Profile Picture</div>
-                    <div class="username">Username</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" id="notifications-icon" viewBox="0 0 24 24"><path d="M21 6.5C21 8.43 19.43 10 17.5 10S14 8.43 14 6.5 15.57 3 17.5 3 21 4.57 21 6.5M19 11.79C18.5 11.92 18 12 17.5 12C14.47 12 12 9.53 12 6.5C12 5.03 12.58 3.7 13.5 2.71C13.15 2.28 12.61 2 12 2C10.9 2 10 2.9 10 4V4.29C7.03 5.17 5 7.9 5 11V17L3 19V20H21V19L19 17V11.79M12 23C13.11 23 14 22.11 14 21H10C10 22.11 10.9 23 12 23Z" /></svg>
+                    <img src="icons/pirate.png" alt="Pirate Profile" class="profile-icons">
+                    <div class="username">Steve the Pirate @stevepirate</div>
                 </div>
             </div>
             <div class="profile-bar">
                 <div class="profile-left-container">
-                    <div class="profile-picture-two">Profile Picture</div>
+                <img src="icons/pirate.png" alt="Pirate Profile" class="profile-icons-two">
                     <div class="welcome-container">
                         <div class="hi">Hi there,</div>
-                        <div class="user">JDoyle (@theguy)</div>
+                        <div class="user">Steve (@stevepirate)</div>
                     </div>
                 </div>
                 <div class="profile-right-container">
@@ -94,8 +94,8 @@
             </div>
             <div class="your-projects">
                 <div class="grid-plan">
-                    <div class="grid-title">Exciting Project</div>
-                    <div class="grid-subtitle">Look at how cool this is!</div>
+                        <div class="grid-title">Exciting Project</div>
+                        <div class="grid-subtitle">Look at how cool this is!</div>
                     <div class="grid-icons">Icons</div>
                 </div>
                 <div class="grid-plan">
@@ -176,24 +176,6 @@
             </div>
         </div>
     </div>
-<script>
-import SvgIcon from '@jamescoyle/vue-icon'
-import { mdiAccount } from '@mdi/js'
-
-export default {
-	name: "my-cool-component",
-
-	components: {
-		SvgIcon
-	},
-
-  	data() {
-		return {
-			path: mdiAccount,
-	  	}
-  	}
-}
-</script>
 </body>
 
 </html>
